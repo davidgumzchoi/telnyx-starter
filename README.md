@@ -1,3 +1,27 @@
+# Telnyx - Coding Challenge
+
+## Prompt
+> Add a blog feed feature to our seed application. This feature should live in a new page that shows all blog posts, sorted by publish date. Users should also be able to view individual blog posts in a separate page where they can read comments and add a comment to the post.
+
+## Business Requirements
+* Blog feed should list all posts and associated title, author, date and description, sorted by publish date from newest first
+* Users can view individual blog posts in a separate page
+* Users can view comments for a blog post
+* Users can add a comments to a blog post
+
+## Technical Requirements:
+* Two or more distinct components demonstrating component hieracrchy
+* At least one service that interfaces with the included REST API
+* At least one unit test
+
+> As long as requirements for the challenge are met, feel free to add, upgrade or swap out npm packages as needed. View the README for more in-depth information on what's included
+
+## David Requirements
+* Deploy viewable UI prod version to gh-pages
+* Update README instructions to deploy locally for Telnyx
+
+---
+
 # Telnyx starter kit
 > Boilerplate web application for Telnyx take-home code challenge
 
