@@ -1,0 +1,11 @@
+<ng-container *ngIf="comment">
+    <h2>Comment: {{comment.id}}</h2>
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">{{comment.user}} | {{comment.date}}</h6>
+            <p class="card-text">{{comment.content}}</p>
+            <a [routerLink]="['/posts', comment.postId, 'comments']" class="card-link">Back</a>
+        </div>
+    </div>
+</ng-container>
+    

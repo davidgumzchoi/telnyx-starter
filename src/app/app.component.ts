@@ -3,14 +3,11 @@
  */
 import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app',
-  template: `
-    <navigation></navigation>
+import template from './app.html';
 
-    <div class='px-3'>
-      <router-outlet></router-outlet>
-    </div>
-  `,
+@Component({
+    selector: 'app',
+    template
 })
+
 export class AppComponent {}

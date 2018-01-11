@@ -1,24 +1,26 @@
 # Telnyx - Coding Challenge
 
-## Prompt
-> Add a blog feed feature to our seed application. This feature should live in a new page that shows all blog posts, sorted by publish date. Users should also be able to view individual blog posts in a separate page where they can read comments and add a comment to the post.
+## For Telnyx Review
+* UI can be viewed at http://davidgumzchoi.github.io/telnyx-starter
+* See [Quick Start](#quick-start) instructions to deploy code locally
+* Business and Technical Requirements have been fulfilled
+* Modifications
+  * Upgraded Bootstrap to latest beta version
+* Strategy
+  * Use of individual components for each page
+  * Service for each component
+  * Shared service for reusable services
+  * OrderByDatePipe takes parameter due to varying API
+  * Test using Mock by using a real instance with Spy
 
-## Business Requirements
-* Blog feed should list all posts and associated title, author, date and description, sorted by publish date from newest first
-* Users can view individual blog posts in a separate page
-* Users can view comments for a blog post
-* Users can add a comments to a blog post
-
-## Technical Requirements:
-* Two or more distinct components demonstrating component hieracrchy
-* At least one service that interfaces with the included REST API
-* At least one unit test
-
-> As long as requirements for the challenge are met, feel free to add, upgrade or swap out npm packages as needed. View the README for more in-depth information on what's included
-
-## David Requirements
-* Deploy viewable UI prod version to gh-pages
-* Update README instructions to deploy locally for Telnyx
+## Requirements
+* [x] Blog feed should list all posts and associated title, author, date and description, sorted by publish date from newest first
+* [x] Users can view individual blog posts in a separate page
+* [x] Users can view comments for a blog post
+* [x] Users can add a comments to a blog post
+* [x] Two or more distinct components demonstrating component hieracrchy
+* [x] At least one service that interfaces with the included REST API
+* [x] At least one unit test
 
 ---
 
@@ -109,9 +111,3 @@ interface Comment {
   "content": String;        // Comment content
 }
 ```
-
-## Delivering to Telnyx
-
-You may create a Git repo, or zip up this entire directly and deliver the source code to Telnyx.  Ensure that extraneous folders, eg. `/node_modules`, are not included in the zip file.  If you've initialized Git in this directory locally, you may use [git clean](https://git-scm.com/docs/git-clean) to remove uncommitted and ignored files before compressing the project.  Including version control is strongly encouraged.
-
-**Thank you, and have fun!**

@@ -9,14 +9,14 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from 'src/app/app.component';
 
 describe('App test suite', function() {
-  beforeEach(async(function() {
-    TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      schemas: [NO_ERRORS_SCHEMA]
-    }).compileComponents();
-  }));
+    beforeEach(async(function() {
+        TestBed.configureTestingModule({
+            declarations: [AppComponent],
+            schemas: [NO_ERRORS_SCHEMA]
+        }).compileComponents();
+    }));
 
-  it('contains spec that returns true', function() {
-    expect(true).toBe(true);
-  });
+    it('contains spec that returns true', function() {
+        expect(true).toBe(true);
+    });
 });

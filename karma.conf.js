@@ -62,5 +62,8 @@ module.exports = function(config) {
     },
     singleRun: true,
     concurrency: Infinity,
+    browserNoActivityTimeout: 60000,
+    browserDisconnectTimeout: 30000,
+    captureTimeout: 60000
   });
-}
+};

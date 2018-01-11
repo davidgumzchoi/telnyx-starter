@@ -1,0 +1,46 @@
+<h2 id="posts">Comments</h2>
+<ng-container *ngIf="comments.length;else noComments">
+    <div class="card" *ngFor="let comment of comments | orderByDate: 'date'">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">{{comment.user}} | {{comment.date}}</h6>
+            <p class="card-text">{{comment.content}}</p>
+            <a class="card-link" [routerLink]="['/comments', comment.id]">View Comment</a>
+        </div>
+    </div>
+</ng-container>
+<ng-template #noComments>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text text-muted">No comments to display</p>
+        </div>
+    </div>
+</ng-template>
+
+<h3>Add a Comment</h3>
+<form [formGroup]="commentForm" (ngSubmit)="addComment()">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" placeholder="Enter Name" type="text" name="name" id="name" [formControl]="name">
+        <div [hidden]="name.valid || name.untouched">
+            <div [hidden]="!name.hasError('minlength')">
+                Name can not be shorter than 5 characters
+            </div>
+            <div [hidden]="!name.hasError('required')">
+                Name is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="content">New Comment</label>
+        <textarea class="form-control" [formControl]="content" rows="3" id="content"></textarea>
+        <div [hidden]="content.valid || content.untouched">
+            <div [hidden]="!content.hasError('minlength')">
+                Comment can not be shorter than 10 characters
+            </div>
+            <div [hidden]="!content.hasError('required')">
+                Comment is required
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!commentForm.valid">Submit</button>
+</form>

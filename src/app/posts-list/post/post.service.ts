@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+
+import { SharedService, EndPoint } from './../../shared/shared.service';
+
+@Injectable()
+export class PostService {
+    public constructor(private _http: HttpClient,
+        private _sharedService: SharedService,
+        private _endPoint: EndPoint) {
+    }
+
+    getPost(postId: string): Observable<any> {
+        return this._http.get(`${this._sharedService.ROOT_URL}/posts/${postId}`, this._endPoint.requestOptions());
+    }
+}
