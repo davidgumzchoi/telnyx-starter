@@ -38,3 +38,10 @@ This will run two scripts concurrently:
 #### 3. Navigate to `http://localhost:9000/`
 
 You should see "Welcome!", and a barebones web application with navigational links to "Home" and "About".
+
+### Testing
+
+To run tests:
+```shell
+$ npm test
+```
